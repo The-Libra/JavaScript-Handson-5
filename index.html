@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <h1>Strings (please go through codes., here they are not getting displayed properly.)</h1>
+    <hr>
+    <h2>1. Count Characters</h2>
+    <fieldset>
+        <pre>
+        const countCharacters = (S) => 
+            {
+              let countOfA=0;  
+              let countOfD=0;
+              for(let i=0; i<S.length; i++){
+                if(S[i]=="A")
+                countOfA++;
+                if(S[i]=="D")
+                countOfD++;
+              }
+              let B=[countOfA, countOfD]
+              return B;
+            };
+        
+        </pre>
+    </fieldset>
+
+
+    <h2>2. Count the Heads</h2>
+    <fieldset>
+        <pre>
+        var Count_Occ = (s) => 
+        {
+            let str="";
+            for(let i=s.length-1; i>=0; i--){
+            let count=1;
+            for(let j=0; j<i; j++){
+                if(s[i]==s[j])
+                count++;
+            }
+            if(count>1)
+                str+=s[i]+count;
+            }
+            return (str);
+        };
+    </fieldset>
+
+
+    <h2>3. Count the Vowels</h2>
+    <fieldset>
+        <pre>
+        var Count_Vowels= (S) => 
+        {
+        let county=0;
+        for(let i=0; i<S.length; i++){
+        if(S[i]=='A' || S[i]=='a' || S[i]=='E' || S[i]=='e'
+        || S[i]=='I' || S[i]=='i' || S[i]=='O' || S[i]=='o'
+        || S[i]=='U' || S[i]=='u')
+            county++;
+        }    
+            return county;
+        };   
+        </pre>
+    </fieldset>
+
+
+    <h2>4. Concatenate the Strings</h2>
+    <fieldset>
+        <pre>
+        var Concatenate_Strings = (S1, S2) => 
+        {
+            return (S1.concat(S2))  ;  
+        };
+             
+        </pre>
+    </fieldset>
+
+
+    <h2>5. Find Length</h2>
+    <fieldset>
+        <pre>
+        const findLength = (S) => 
+        {
+            return (S.length); 
+        };
+        </pre>
+    </fieldset>
+
+
+    <h2>6. Find the Winner</h2>
+    <fieldset>
+        <pre>
+            var Game_Winner = (S) => 
+            {
+              let countA=0, countD=0;
+              for(let i=0; i<S.length; i++)
+              {
+                if(S[i]=='A')
+                countA++;
+                else
+                countD++;
+              }
+              if(countA>countD)
+              return "Aditya";
+              else if(countD>countA)
+              return "Danish";
+              else return "Draw";
+            }
+        </pre>
+    </fieldset>
+
+
+    <h2>7. Join Strings</h2>
+    <fieldset>
+        <pre>
+            const joinStrings = (S, P) => 
+            {
+              return (S.concat(P))  ;
+            };      
+        </pre>
+    </fieldset>
+
+
+    <h2>8. Plaindrome Check</h2>
+    <fieldset>
+        <pre>
+            var Palin_Check = (str) =>
+            {
+            let str2="";
+            let size=str.length;
+            for(let i=size-1; i>=0; i--)
+            {
+            str2+=str[i];
+            }
+            
+            if(str===str2)
+            return "True";
+            else 
+            return "False";
+            };    
+        </pre>
+    </fieldset>
+
+
+    <h2>9. Reverse the String.</h2>
+    <fieldset>
+        <pre>
+            var Reverse_String = (str) => 
+            {
+               let str2="";
+               let size=str.length;
+                 for(let i=size-1; i>=0; i--)
+                 {
+                   str2+=(str[i]);
+                 }
+                 return (str2);
+            };
+             
+    </pre>
+    </fieldset>
+    <h2>10. Match the Strings.</h2>
+    <fieldset>
+        <pre>
+            var String_Match = (S1,S2) => 
+            {
+            if(S1==S2)
+            return "YES";
+            else
+            return "NO";
+            };
+             
+    </pre>
+    </fieldset>
+    <h2>11. String Replace.</h2>
+    <fieldset>
+        <pre>
+            var Replace = (S, pattern , text) => 
+            {
+            return (S.replace(pattern, text))  ; 
+            };
+             
+    </pre>
+    </fieldset>
+    <h2>12. Split the String.</h2>
+    <fieldset>
+        <pre>
+            var Split_the_string = (S) => 
+            {
+            
+            return (S.split(" "));
+                    
+            };
+             
+    </pre>
+    </fieldset>
+    <h2>13. Count the Vowels and Consonants.</h2>
+    <fieldset>
+        <pre>
+            var Count_Vowels= (S) => 
+        {
+        let countV=0
+        for(let i=0; i<S.length; i++){
+            if(S[i]=='A' || S[i]=='a' || S[i]=='E' || S[i]=='e'
+            || S[i]=='I' || S[i]=='i' || S[i]=='O' || S[i]=='o'
+            || S[i]=='U' || S[i]=='u')
+            countV++;
+        }   
+        return countV;
+        };
+        var Count_Consonants= (S) => 
+        {
+        let countV=0
+        for(let i=0; i<S.length; i++){
+            if(S[i]=='A' || S[i]=='a' || S[i]=='E' || S[i]=='e'
+            || S[i]=='I' || S[i]=='i' || S[i]=='O' || S[i]=='o'
+            || S[i]=='U' || S[i]=='u')
+            countV++;
+        }
+            return (S.length-countV);
+        };
+ 
+             
+    </pre>
+    </fieldset>
+
+</body>
+</html>
